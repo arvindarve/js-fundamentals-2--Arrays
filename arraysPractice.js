@@ -5,6 +5,10 @@ var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
   //Code Here
+  function first(a) {
+      return a[0];
+  }
+  first(arr);
 
 
 //Next problem
@@ -13,8 +17,10 @@ var arr = [10,20,30];
 
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
-
-
+function last(arr){
+    return arr[arr.length - 1];
+}
+last(arr);
   //Code Here
 
 
@@ -25,7 +31,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
-
+    function looper(arr) {
+        for (i = 0;i <= arr.length - 1;i++) {
+            alert(arr[i]);
+        }
+    }
+    looper(family);
 
 //Next problem
 
@@ -35,6 +46,12 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
+function reversedLooper(arr) {
+        for (i = 4;i >= 0;i--) {
+            alert(arr[i]);
+        }
+    }
+   reversedLooper(letters);
 
 
 //Next Problem
@@ -44,6 +61,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
+function evenFinder(arr){
+    for(i=0;i <= arr.length;i++) {
+        if(arr[i] % 2 !== 0) {
+            arr.splice(i,1);
+        }
+    }
+    return arr;
+};
+evenFinder(nums);
 
 
 
@@ -73,8 +99,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
-
-
+function divider(arr){
+    var evens = [];
+    var odds = [];
+    for (var i = 0;i < arr.length;i++){
+        if(arr[i] % 2 === 0) {
+            evens.push(arr[i]);
+        }else if(arr[i] % 2 !== 0){
+            odds.push(arr[i]);
+        } 
+    }
+    return [evens,odds];
+}
+divider(numbersArray);
 //Next Problem
 
 
